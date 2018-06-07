@@ -6,19 +6,19 @@
 
 int main() {
     char apiType[] = "GL";
-	AbstractFactory* factory = nullptr;
-	if (strcmp(apiType, "GL") == 0) {
-		factory = new GLFactory();
-	} else if (strcmp(apiType, "Metal") == 0) {
-		factory = new MetalFactory();
-	} else {
-		std::cout << "Does not support" << std::endl;
-		exit(0);
-	}
+    AbstractFactory* factory = nullptr;
+    if (strcmp(apiType, "GL") == 0) {
+        factory = new GLFactory();
+    } else if (strcmp(apiType, "Metal") == 0) {
+        factory = new MetalFactory();
+    } else {
+        std::cout << "Does not support" << std::endl;
+        exit(0);
+    }
 
-	Rectangle* rect = factory->createRect();
-	GPUInfo* info = factory->createGPUInfo();
+    Rectangle* rect = factory->createRect();
+    GPUInfo* info = factory->createGPUInfo();
 
-	rect->draw();
-	info->getInfo();
+    rect->draw();
+    info->getInfo();
 }

@@ -5,13 +5,13 @@
 #include "metal_info.cpp"
 
 class MetalFactory: public AbstractFactory {
-	public:
-		Rectangle* createRect() {
-			return new MetalRect;
-		}
+    public:
+        Rectangle* createRect() {
+            return new MetalRect;
+        }
 
-		GPUInfo* createGPUInfo() {
-			return new MetalInfo;
-		} 
+        GPUInfo* createGPUInfo() {
+            return new MetalInfo;
+        } 
 };
 

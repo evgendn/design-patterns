@@ -5,13 +5,13 @@
 #include "gl_info.cpp"
 
 class GLFactory: public AbstractFactory {
-	public:
-		Rectangle* createRect() {
-			return new GLRect();
-		}
+    public:
+        Rectangle* createRect() {
+            return new GLRect();
+        }
 
-		GPUInfo* createGPUInfo() {
-			return new GLInfo();
-		} 
+        GPUInfo* createGPUInfo() {
+            return new GLInfo();
+        } 
 };
 
