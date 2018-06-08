@@ -21,4 +21,9 @@ int main() {
 
     rect->draw();
     info->getInfo();
+
+    delete factory;
+    delete rect;
+    delete info;
 }
+
